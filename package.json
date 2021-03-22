@@ -1,0 +1,54 @@
+{
+  "name": "webpack-plugin-jscc",
+  "version": "0.0.1",
+  "license": "ISC",
+  "author": "duanlikang",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "pretest": "tsc",
+    "test": "yarn lint && jest --env node",
+    "publish": "node ./scripts/release.js",
+    "lint": "prettier --write --parser typescript \"{src,test}/**/*.ts\""
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "prettier --parser=typescript --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "enquirer": "^2.3.6",
+    "inquirer": "^8.0.0",
+    "jest": "^25.5.4",
+    "lint-staged": "^9.5.0",
+    "prettier": "^2.2.1",
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.7.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
+    ]
+  }
+}
