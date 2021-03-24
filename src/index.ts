@@ -1,3 +1,2 @@
-export default {
-  library: 'Webpack Plugin Jscc',
-}
+import JsccPlugin from './plugin'
+export default JsccPlugin

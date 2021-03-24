@@ -33,6 +33,11 @@
       "git add"
     ]
   },
+  "dependencies": {
+    "@types/loader-utils": "^2.0.1",
+    "jscc": "^1.1.1",
+    "loader-utils": "^2.0.0"
+  },
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "enquirer": "^2.3.6",
@@ -41,7 +46,8 @@
     "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
     "ts-jest": "^25.5.1",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "webpack": "^5.27.2"
   },
   "jest": {
     "preset": "ts-jest",
