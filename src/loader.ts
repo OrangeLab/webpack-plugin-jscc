@@ -6,9 +6,6 @@ interface JsccOptions{
 }
 
 export default function(source: string, inputSourceMap:any) {
-  console.log('JSCC Source Start =====================')
-  console.log("source:", source)
-  console.log('JSCC Source End =====================')
   const options: JsccOptions = loaderUtils.getOptions(this) || {
     values: {},
   }
