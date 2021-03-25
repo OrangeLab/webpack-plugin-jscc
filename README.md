@@ -35,6 +35,7 @@ plugins: [
 
 
 ## 条件编译业务书写规则
+> 更多 jscc 高级用法，可以参考 [jscc 文档](https://github.com/aMarCruz/jscc)
 
 js/ts:
 ```
