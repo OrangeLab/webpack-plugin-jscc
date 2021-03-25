@@ -1,6 +1,6 @@
 {
   "name": "webpack-plugin-jscc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "ISC",
   "author": "duanlikang",
   "main": "dist/index.js",
