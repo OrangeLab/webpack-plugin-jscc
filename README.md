@@ -27,7 +27,7 @@ JsccPlugin的参数说明
 plugins: [
   new JsccPlugin({
     values: {
-        _PLATFORM: 'xxx', // 匹配业务环境标识
+        _PLATFORM: 'web', // 匹配业务环境标识
     }
   })
 ]
@@ -36,27 +36,33 @@ plugins: [
 
 ## 条件编译业务书写规则
 
-js:
+js/ts:
 ```
-//#if _PLATFORM==='kflower'
-console.info('【App.vue】 in kflower branch logic')
+//#if _PLATFORM==='web'
+console.info('【js/ts】 in web')
 //#else
-console.info('【App.vue】 in other branch logic')
+console.info('【js/ts】 in other')
 //#endif
 ```
 
 vue:
 ```
-<!--#if _PLATFORM==='kflower'  //-->
-<HelloWorld msg="Welcome to kflower!"/>
-<!--#endif //-->
+<template>
+  <div class="view">
+    <!--#if _PLATFORM==='web'  //-->
+    <HelloWorld msg="Welcome to web!"/>
+    <!--#else //-->
+    <HelloWorld msg="Welcome to other!"/>
+    <!--#endif //-->
+  </div>
+</template>
 ```
 
 
 css:
 ```
-/*#if _PLATFORM==='kflower' //*/ 
-.kflower {
+/*#if _PLATFORM==='web' //*/ 
+.web {
     height: 10px
   }
 /*#endif //*/

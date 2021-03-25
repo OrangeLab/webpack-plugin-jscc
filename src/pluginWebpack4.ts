@@ -32,7 +32,7 @@ export default class JsccPlugin {
       (compilation:Compilation) => {
         const excludesMatcher = this.options.excludes
         const includesMatcher = this.options.exts.map(
-          ext => new RegExp(`\.${ext}`)
+          ext => new RegExp(`\.${ext}$`)
         )
         compilation.hooks.normalModuleLoader.tap(JsccPlugin.NS, (loaderContext:any,module:any) => {
           const userRequest = getPath(module.userRequest)
