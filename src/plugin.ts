@@ -1,6 +1,8 @@
 import webpack,{WebpackPluginInstance as Plugin} from 'webpack'
+import {JsccPluginOptions} from './utils/type';
 declare class JsccPlugin implements Plugin {
   static NS: string
+  constructor(options?:JsccPluginOptions)
   apply(compiler: webpack.Compiler): void
 }
 

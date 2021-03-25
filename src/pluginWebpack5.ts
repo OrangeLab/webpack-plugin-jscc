@@ -1,14 +1,7 @@
 import anymatch from 'anymatch';
 import {Compilation, Compiler} from 'webpack';
 import {getPath} from './utils/index';
-
-export interface JsccPluginOptions {
-  exts?: Array<string>,
-  values?: {
-    [key:string]: any
-  },
-  excludes?: Array<RegExp>
-}
+import {JsccPluginOptions} from './utils/type';
 
 export default class JsccPlugin {
   static NS = 'JsccPlugin'
