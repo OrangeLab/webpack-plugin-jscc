@@ -5,7 +5,6 @@ declare class JsccPlugin implements Plugin {
 }
 
 let Plugin: typeof JsccPlugin
-console.log('Webpack.version:', webpack.version)
 if (webpack.version && webpack.version[0] > '4') {
   // webpack5 and upper
   Plugin = require('./pluginWebpack5').default
