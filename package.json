@@ -13,7 +13,7 @@
     "build": "tsc",
     "pretest": "tsc",
     "test": "yarn lint && jest --env node",
-    "publish": "node ./scripts/release.js",
+    "publish": "npm run build && node ./scripts/release.js",
     "lint": "prettier --write --parser typescript \"{src,test}/**/*.ts\""
   },
   "publishConfig": {
